@@ -44,8 +44,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'productores'%}">Productores</a>
               </li>
-              <button type="button" class="btn btn-primary">Login</button>         
-              <button type="button" class="btn btn-success">Register</button>  
+              <form   action="{% url 'login'%}">
+                <button  class="btn btn-primary">Login</button>
+              </form>
+              <form   action="{% url 'registro'%}">
+                <button  class="btn btn-success">Registro</button>
+              </form>
             </ul>
           </div>
         </div>
@@ -131,7 +135,9 @@
         
         </div>
         <br>
-        <center><button type="button" class="btn btn-success">Registrarce como productor</button></center>  
+        <center><form   action="{% url 'registroUsuario'%}">
+          <button  class="btn btn-primary">Registrarme como productor</button>
+        </form></center>  
     </section>
 
     <br>

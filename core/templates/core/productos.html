@@ -49,32 +49,36 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="/static/core/img/logo1.png" alt="logo" style="height: 50px;"> AgricolasAPP</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'productos'%}">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'foro'%}">foro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'productores'%}">Productores</a>
-              </li>
-              <button type="button" class="btn btn-primary">Login</button>         
-              <button type="button" class="btn btn-success">Register</button>  
-            </ul>
-          </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/static/core/img/logo1.png" alt="logo" style="height: 50px;"> AgricolasAPP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'productos'%}">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'foro'%}">foro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'productores'%}">Productores</a>
+          </li>
+          <form   action="{% url 'login'%}">
+            <button  class="btn btn-primary">Login</button>
+          </form>
+          <form   action="{% url 'registro'%}">
+            <button  class="btn btn-success">Registro</button>
+          </form>
+        </ul>
+      </div>
+    </div>
+</nav>
     
     <div class="container my-5">
       <div class="row">

@@ -67,12 +67,14 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
           <div class="col">
             <div class="card shadow-sm">
-              <img src="/static/core/img/persona1.jpg" class="bd-placeholder-img card-img-top" width="100" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+              <img src="/static/core/img/persona1.jpg" class="bd-placeholder-img card-img-top" style="width: 100%;" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
               <div class="card-body">
                 <p class="card-text">Hola me llamo karla, soy agricultora de frutas y verduras</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
   
@@ -82,12 +84,14 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-              <img src="/static/core/img/persona2.webp" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+              <img src="/static/core/img/persona2.webp" class="bd-placeholder-img card-img-top" style="width: 100%;" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
               <div class="card-body">
                 <p class="card-text">Soy tomas, soy jefe de una empresa de exportacion de verduras</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -97,12 +101,14 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-              <img src="/static/core/img/usuario3.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+              <img src="/static/core/img/usuario3.jpg" class="bd-placeholder-img card-img-top" style="width: 100%;" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
               <div class="card-body">
                 <p class="card-text">Hola a todos me llamo Cristina, trabajo con todo tipo de verduras</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -118,7 +124,9 @@
                 <p class="card-text">Buenas soy Felipe, trabajo con frutas de exportacion por mayor</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -133,7 +141,9 @@
                 <p class="card-text">Hola soy matias, trabajo en con todo tipo de vegetales, venta por mayor.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                  
@@ -148,7 +158,9 @@
                 <p class="card-text">Me llamo antuan, vendo todo tipo de vegetales, manzanas y platanos.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -164,7 +176,9 @@
                 <p class="card-text">Hola me llamo cristian, toda mi vida e trabajado con verduras de todo tipo, venta por mayor</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -179,7 +193,9 @@
                 <p class="card-text">Soy vicente productor agricola de frutas y verduras, realizo venta por mayor.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -189,12 +205,14 @@
           </div>
           <div class="col">
             <div class="card shadow-sm">
-              <img src="/static/core/img/persona9.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+              <img src="/static/core/img/persona9.jpg" class="bd-placeholder-img card-img-top"  width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
               <div class="card-body">
                 <p class="card-text">Me llamo valentina, tengo una empresa de producciones agricolas,realizamos venta por mayor.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    <a href="{% url 'productos'%}">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                    </a>
                     <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
                   </div>
                   
@@ -208,7 +226,7 @@
     <br>
     <br>
     <br>
-    <center><button type="button" class="btn btn-success">Registrarce como productor</button></center>  
+    <center><button type="button" class="btn btn-success">Registrarse como productor</button></center>  
     <br>
     <br>
     <br>

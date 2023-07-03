@@ -5,7 +5,6 @@ from django.shortcuts import render
 def home (request):
     return render(request,'core/home.html')
 
-
 def productos (request):
     return render(request,'core/productos.html')
 
@@ -23,6 +22,9 @@ def registro (request):
 
 def usuario (request):
     return render(request,'core/usuario.html')
+
+def detalle_productores (request):
+    return render(request,'core/detalle_productores.html')
 
 
    

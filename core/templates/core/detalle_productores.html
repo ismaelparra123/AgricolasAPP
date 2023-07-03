@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgricolasAPP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+
+    
+
+    <style>
+        .btn-primary{
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+
+        .btn-success{
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+    </style>
+    <style>
+      /* Estilos CSS para personalizar la página */
+      #map {
+        height: 400px; /* Ajusta la altura según tus necesidades */
+        width: 100%; /* Ajusta el ancho según tus necesidades */
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[TU_CLAVE_DE_API]&callback=initMap" async defer></script>
+    <script>
+      function initMap() {
+        // Aquí puedes definir la latitud y longitud del marcador
+        var latitud = 40.712776;
+        var longitud = -74.005974;
+        
+        // Crea un nuevo mapa centrado en las coordenadas especificadas
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: latitud, lng: longitud},
+          zoom: 12 // Ajusta el nivel de zoom según tus necesidades
+        });
+        
+        // Agrega un marcador en las coordenadas especificadas
+        var marker = new google.maps.Marker({
+          position: {lat: latitud, lng: longitud},
+          map: map,
+          title: 'Ubicación de los productores agrícolas'
+        });
+      }
+    </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/static/core/img/logo1.png" alt="logo" style="height: 50px;"> AgricolasAPP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'productos'%}">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'foro'%}">foro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'productores'%}">Productores</a>
+          </li>
+          <form   action="{% url 'login'%}">
+            <button  class="btn btn-primary">Login</button>
+          </form>
+          <form   action="{% url 'registro'%}">
+            <button  class="btn btn-success">Registro</button>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container my-5">
+      <h1>Productores Agrícolas</h1>
+      <hr><hr>
+
+      <h2>Información completa</h2>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/static/core/img/persona1.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Karla Espinoza</h5>
+              <p class="card-text">Hola mi nombre es Karla, soy agricultora de frutas y verduras en la zona de Rancagua, toda nuestra produccion es vendida en nuestro sala de ventas</p>
+              <p class="card-text"><small class="text-muted">Última actualización hace 1 Mes</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card shadow-sm">
+          
+          <div class="card-body">
+            <p class="card-text">Hola me llamo Karla, soy agricultora de frutas y verduras</p>
+            <p class="card-text"> Explica cómo funciona el modelo de negocio de los productores agrícolas, qué tipo de productos cultivan, cómo se distribuyen, etc.</p>
+          </div>
+        </div>
+      </div>
+      <p>Aquí puedes proporcionar una descripción completa de los productores agrícolas, su historia, ubicación, tamaño, etc.</p>
+
+      <h2>Modelo de negocio</h2>
+      
+
+      <h2>Canales de comunicación</h2>
+      <ul>
+        <li>Teléfono: [Número de teléfono]</li>
+        <li>Correo electrónico: [Dirección de correo electrónico]</li>
+        <li>Sitio web: <a href="[URL del sitio web]">[Nombre del sitio web]</a></li>
+        <li>Redes sociales: [Enlaces a las cuentas de redes sociales]</li>
+      </ul>
+
+      <h2>Productos a comercializar</h2>
+      <ul>
+        <li>Producto 1: [Descripción del producto 1]</li>
+        <li>Producto 2: [Descripción del producto 2]</li>
+        <li>Producto 3: [Descripción del producto 3]</li>
+        <!-- Agrega más productos si es necesario -->
+      </ul> 
+  </div>
+
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <p class="text-muted">© 2022- Esta pagina cuenta con derechos de autor- COMUNIDAD AGRICOLA -</p>
+        </div>
+    
+        <div class="col mb-3">
+    
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Pagina</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Productos</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Productores</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Foro</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Crea tu usuario</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registro</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Login</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registrate como productor</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registrate como comprador</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Informacion</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nosotros</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Telefono: 987676345</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Correo: ProductosAG@gmail.com</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pagina online</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    
+</body>
+</html>
+

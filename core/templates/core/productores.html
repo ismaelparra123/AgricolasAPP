@@ -41,7 +41,7 @@
             <a class="nav-link" href="{% url 'productos'%}">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'foro'%}">foro</a>
+            <a class="nav-link" href="{% url 'foro'%}">Foro</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'productores'%}">Productores</a>
@@ -75,7 +75,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
   
                 </div>
@@ -92,9 +94,10 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -109,7 +112,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -127,7 +132,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -144,7 +151,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                  
                 </div>
@@ -161,7 +170,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -179,7 +190,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -196,7 +209,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -213,7 +228,9 @@
                     <a href="{% url 'productos'%}">
                       <button type="submit" class="btn btn-sm btn-outline-secondary">Comprar</button>
                     </a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    <a href="{% url 'detalle_productores'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">+Info</button>
+                    </a>
                   </div>
                   
                 </div>
@@ -226,7 +243,11 @@
     <br>
     <br>
     <br>
-    <center><button type="button" class="btn btn-success">Registrarse como productor</button></center>  
+    <center>
+      <form action="{% url 'usuario'%}">
+        <button  class="btn btn-success">Registrate para ser un nuevo productor</button>
+      </form>
+    </center> 
     <br>
     <br>
     <br>

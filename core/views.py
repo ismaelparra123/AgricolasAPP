@@ -18,6 +18,9 @@ def login (request):
     return render(request,'core/login.html')
 
 def registro (request):
+    if request.method == 'POST':
+        usuario = request.POST.get("usuario")
+        usuario = request.POST.get("usuario")
     return render(request,'core/registro.html')
 
 def usuario (request):
@@ -26,6 +29,10 @@ def usuario (request):
 def detalle_productores (request):
     return render(request,'core/detalle_productores.html')
 
+def carrito (request):
+    return render(request, 'core/carrito.html')
 
+def API (request):
+    return render(request, 'core/API.html')
    
 

@@ -288,7 +288,7 @@ const listUsers = async () => {
 
     let content = ``;
     users.forEach((user, index) => {
-      content += `
+      content +=`
                 <tr>
                     <td> ${index + 1} </td>
                     <td> ${user.name} </td>
@@ -297,9 +297,9 @@ const listUsers = async () => {
                     <td> ${user.company.name} </td>
                     <td><i class="fa-solid fa-circle-check"></i>Estado</td>
                     <td>
-                        
-                        <button class="btn btn-sm btn-primary"><i class="fa-solid fa-shopping-cart"><a href="{% url 'carrito'%}"></a></i></button>
-                        <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <form action="http://127.0.0.1:8000/carrito">
+                        <button class="btn btn-sm btn-primary"><i class="fa-solid fa-shopping-cart" ></i></button> 
+                    </form>    
                     </td>
                 </tr>`;
     });
